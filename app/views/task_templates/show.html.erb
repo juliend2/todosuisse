@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @task_template.description %>
+</p>
+
+<p>
+  <strong>Repeating interval:</strong>
+  <%= @task_template.repeating_interval %>
+</p>
+
+<p>
+  <strong>From day:</strong>
+  <%= @task_template.from_day %>
+</p>
+
+<%= link_to 'Edit', edit_task_template_path(@task_template) %> |
+<%= link_to 'Back', task_templates_path %>

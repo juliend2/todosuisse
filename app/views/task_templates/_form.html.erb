@@ -1,0 +1,32 @@
+<%= form_with(model: task_template, local: true) do |form| %>
+  <% if task_template.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(task_template.errors.count, "error") %> prohibited this task_template from being saved:</h2>
+
+      <ul>
+      <% task_template.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description, id: :task_template_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :repeating_interval %>
+    <%= form.text_field :repeating_interval, id: :task_template_repeating_interval %>
+  </div>
+
+  <div class="field">
+    <%= form.label :from_day %>
+    <%= form.date_select :from_day, id: :task_template_from_day %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

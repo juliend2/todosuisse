@@ -1,24 +1,26 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+rails generate scaffold TaskTemplate description:text repeating_interval:string from_day:date
 
-Things you may want to cover:
+rails generate scaffold Task description:text status:string ordering:integer todo_on:date done_at:datetime task_template:references
 
-* Ruby version
+## Ruby version
 
-* System dependencies
+2.4.3
 
-* Configuration
+## System dependencies
 
-* Database creation
+linux, ruby, bundler
 
-* Database initialization
+## Configuration
 
-* How to run the test suite
+## Database creation
 
-* Services (job queues, cache servers, search engines, etc.)
+## Database initialization
 
-* Deployment instructions
+## How to run the test suite
 
-* ...
+## Services (job queues, cache servers, search engines, etc.)
+
+## Deployment instructions
+
